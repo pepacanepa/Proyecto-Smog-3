@@ -1,4 +1,4 @@
-# Proyecto-Smog-3# 📄 README – Entrega 03  
+# Proyecto-Smog-3#  README – Entrega 03  
 **Proyecto: Evolución de la calidad del aire en Santiago (PM2,5)**  
 
 ---
