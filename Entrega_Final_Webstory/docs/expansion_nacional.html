@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-f291bfa2e411f6d0480a3aed0398710a"}, "mark": {"type": "bar", "color": "#4A90E2"}, "encoding": {"tooltip": [{"field": "anio", "type": "quantitative"}, {"field": "estaciones_activas", "type": "quantitative"}], "x": {"field": "anio", "title": "A\u00f1o", "type": "ordinal"}, "y": {"field": "estaciones_activas", "title": "N\u00famero de estaciones activas", "type": "quantitative"}}, "height": 400, "title": "Expansi\u00f3n nacional de la red de monitoreo (2000\u20132026)", "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-f291bfa2e411f6d0480a3aed0398710a": [{"anio": 2000, "estaciones_activas": 4}, {"anio": 2001, "estaciones_activas": 5}, {"anio": 2002, "estaciones_activas": 5}, {"anio": 2003, "estaciones_activas": 5}, {"anio": 2004, "estaciones_activas": 6}, {"anio": 2005, "estaciones_activas": 6}, {"anio": 2006, "estaciones_activas": 6}, {"anio": 2007, "estaciones_activas": 6}, {"anio": 2008, "estaciones_activas": 6}, {"anio": 2009, "estaciones_activas": 18}, {"anio": 2010, "estaciones_activas": 25}, {"anio": 2011, "estaciones_activas": 26}, {"anio": 2012, "estaciones_activas": 28}, {"anio": 2013, "estaciones_activas": 43}, {"anio": 2014, "estaciones_activas": 54}, {"anio": 2015, "estaciones_activas": 54}, {"anio": 2016, "estaciones_activas": 59}, {"anio": 2017, "estaciones_activas": 67}, {"anio": 2018, "estaciones_activas": 72}, {"anio": 2019, "estaciones_activas": 74}, {"anio": 2020, "estaciones_activas": 83}, {"anio": 2021, "estaciones_activas": 86}, {"anio": 2022, "estaciones_activas": 88}, {"anio": 2023, "estaciones_activas": 89}, {"anio": 2024, "estaciones_activas": 90}, {"anio": 2025, "estaciones_activas": 92}, {"anio": 2026, "estaciones_activas": 92}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
