@@ -1,5 +1,5 @@
 <section id="cronica">
-  <h3>Crónica Final — Desigualdad en el aire</h3>
+  <h3>Desigualdad en el aire</h3>
 
   <p>
     En Chile, la contaminación del aire comenzó a registrarse de manera sistemática con la expansión de la red de monitores. 
