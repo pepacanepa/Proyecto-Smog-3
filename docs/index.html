@@ -6,10 +6,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
-  <!-- Librerías Vega -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+ <!-- Librerías Vega en el <head> -->
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
   <style>
     body {
@@ -79,19 +79,20 @@
     </section>
 
     <!-- Sección 2: Expansión por región -->
-    <section>
-      <h2>Expansión por región</h2>
-      <p style="text-align:left; max-width:800px;">
-        La red de monitoreo se expandió de manera desigual entre regiones. Mientras la Región Metropolitana 
-        alcanzó más de 20 estaciones, otras zonas como Atacama o Aysén apenas cuentan con una o dos. 
-        Este hallazgo muestra que la capacidad de medir la contaminación está concentrada en el centro del país, 
-        lo que afecta la confiabilidad de las comparaciones nacionales.
-      </p>
-      <div id="expansion-region-chart"></div>
-      <script>
-        vegaEmbed('#expansion-region-chart', 'visualizaciones/expansion_por_region.json');
-      </script>
-    </section>
+ <!-- Dentro del <main> -->
+<section id="expansion-region">
+  <h2>Expansión por región</h2>
+  <p style="text-align:left; max-width:800px;">
+    La red de monitoreo se expandió de manera desigual entre regiones. Mientras la Región Metropolitana 
+    alcanzó más de 20 estaciones, otras zonas como Atacama o Aysén apenas cuentan con una o dos. 
+    Este hallazgo muestra que la capacidad de medir la contaminación está concentrada en el centro del país, 
+    lo que afecta la confiabilidad de las comparaciones nacionales.
+  </p>
+  <div id="expansion-region-chart"></div>
+  <script>
+    vegaEmbed('#expansion-region-chart', 'visualizaciones/expansion_por_region.json');
+  </script>
+</section>
 
     <!-- Sección 3: Comparación Sur vs Centro -->
     <section>
