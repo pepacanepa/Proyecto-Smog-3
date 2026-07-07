@@ -56,23 +56,14 @@
 <body>
     <header>Proyecto Smog — Calidad del Aire en Chile</header>
 
-<section>
-  <h2>Expansión nacional de la red de monitoreo</h2>
-  <iframe src="visualizaciones/expansion_nacional.html"></iframe>
-  <p class="pie">La red de monitoreo creció de 4 estaciones en 2000 a más de 90 en 2026, reflejando avances en cobertura pero también desigualdades territoriales.</p>
-</section>
-
-<section>
-  <h2>Comparación Centro vs Sur</h2>
-  <iframe src="visualizaciones/grafico_centrovssur.html"></iframe>
-  <p class="pie">Mientras la Región Metropolitana estabiliza sus niveles, Temuco muestra un pico crítico en 2012, evidenciando desigualdad ambiental.</p>
-</section>
-
-<section>
-  <h2>Tendencias divergentes por región</h2>
-  <iframe src="visualizaciones/grafico_tendencias_divergentes.html"></iframe>
-  <p class="pie">Las trayectorias divergentes reflejan diferencias en políticas de control y acceso desigual a un ambiente sano.</p>
-</section>
+<div id="intro" style="max-width:900px;margin:20px auto;text-align:center;">
+  <p style="font-size:1.2em;color:#555;">
+    La investigación presenta la evolución de la red de monitoreo de calidad del aire en Chile entre 2000 y 2026.
+  </p>
+  <p style="font-size:1.2em;color:#555;">
+    Expone diferencias regionales en los niveles de contaminación que permiten dimensionar desigualdades ambientales en el país.
+  </p>
+</div>
 
   <header>
     <h1>Desigualdad en el aire</h1>
@@ -86,9 +77,10 @@
 
  <p>Luego, se expandieron en las regiones de Chile.
 
-<section id="grafico-region">
-  <h2>Expansión de la red de monitoreo por región (2000–2026)</h2>
-  <iframe src="visualizaciones/expansion_por_region.html" width="100%" height="500" style="border:none;"></iframe>
+<section>
+  <h2>Expansión nacional de la red de monitoreo</h2>
+  <iframe src="visualizaciones/expansion_nacional.html"></iframe>
+  <p class="pie">La red de monitoreo creció de 4 estaciones en 2000 a más de 90 en 2026, reflejando avances en cobertura pero también desigualdades territoriales.</p>
 </section>
 
         En 2009, el nivel de PM2.5 en Rancagua duplicó el límite legal con 48.7 µg/m³ y en 2013 la estación Las Encinas de Temuco alcanzó 50.8 µg/m³, el valor más alto del país en ese año. La ampliación de la red permitió observar diferencias regionales que antes no estaban documentadas.</p>
@@ -100,23 +92,29 @@
 
     <p>La Región Metropolitana estabilizó sus niveles en torno a los 25 µg/m³, mientras que el sur registró valores críticos. El caso de Temuco en 2013 se explica por el uso de calefacción a leña húmeda y condiciones climáticas que dificultaron la dispersión del material particulado.</p>
 
-    <section id="grafico-centro-sur">
-  <h2>Comparación Sur vs Centro (2000–2026)</h2>
-  <iframe src="visualizaciones/grafico_centrovssur.html" width="100%" height="500" style="border:none;"></iframe>
+<section>
+  <h2>Comparación Centro vs Sur</h2>
+  <iframe src="visualizaciones/grafico_centrovssur.html"></iframe>
+  <p class="pie">Mientras la Región Metropolitana estabiliza sus niveles, Temuco muestra un pico crítico en 2012, evidenciando desigualdad ambiental.</p>
 </section>
-
 
     <p>Existen limitaciones en la cobertura: estaciones cerradas como Cerrillos, Quilicura e Independencia, series cortas como la de Lautaro y registros anómalos como el salto de Valdivia 2 en dos años. Los incendios de 2023 elevaron los niveles en Maule, Ñuble y Bío Bío, mostrando que la contaminación también responde a eventos naturales.</p>
 
     <p>Las tendencias regionales son divergentes. La Metropolitana muestra descenso y estabilización, Bío Bío mantiene valores altos y La Araucanía presenta episodios críticos. La falta de cobertura en comunas rurales impide dimensionar el problema completo. La política pública requiere cerrar estas brechas de monitoreo para enfrentar las desigualdades en la calidad del aire.</p>
 
-    <section id="grafico-tendencias">
-  <h2>Tendencias divergentes de PM2.5 por región (2000–2026)</h2>
-  <iframe src="visualizaciones/grafico_tendencias_divergentes.html" width="100%" height="500" style="border:none;"></iframe>
+<section>
+  <h2>Tendencias divergentes por región</h2>
+  <iframe src="visualizaciones/grafico_tendencias_divergentes.html"></iframe>
+  <p class="pie">Las trayectorias divergentes reflejan diferencias en políticas de control y acceso desigual a un ambiente sano.</p>
 </section>
 
-    <p>La historia del aire en Chile es la de una mejora desigual. Los datos revelan avances, pero también silencios. Lo que los monitores registran es tan importante como lo que no alcanzan a medir. En esa brecha, entre lo observado y lo invisible, se define la posibilidad de respirar un futuro más justo.</p>
-  </section>
+<section id="cierre" style="background-color:#F5F7FA;padding:40px;margin:0 auto;max-width:900px;border-radius:8px;">
+  <h2 style="color:#4A90E2;">Conclusión</h2>
+  <p style="font-size:1.1em;color:#444;line-height:1.6;border-left:4px solid #7ED321;padding-left:12px;">
+    La calidad del aire en Chile ha mejorado en términos generales, pero con diferencias significativas entre regiones y comunas. 
+    La evidencia subraya que las políticas de control ambiental han tenido efectos desiguales y que la cobertura de monitoreo sigue siendo clave para evaluar riesgos y orientar decisiones públicas.
+  </p>
+</section>
 
   <!-- Script que inserta el gráfico -->
   <script src="js/application.js"></script>
