@@ -1,63 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-<style>
-  body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    background-color: #F5F7FA;
-    color: #333;
-  }
-  header {
-    background-color: #4A90E2;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 1.8em;
-    font-weight: 600;
-  }
-  section {
-    padding: 40px;
-    margin: 0 auto;
-    max-width: 900px;
-    background-color: white;
-    margin-bottom: 20px;
-    border-radius: 8px;
-  }
-  h2 {
-    color: #4A90E2;
-    margin-bottom: 15px;
-  }
-  p.pie {
-    font-style: italic;
-    border-left: 4px solid #7ED321;
-    padding-left: 10px;
-    color: #555;
-  }
-  iframe {
-    border: none;
-    width: 100%;
-    height: 500px;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-</style>
-
-<style>
-  p, .pie {
-    text-align: justify;
-  }
-</style>
-
- <!DOCTYPE html>
-<html lang="es">
-<head>
   <meta charset="UTF-8">
   <title>Proyecto Smog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Librerías Vega -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      background-color: #F5F7FA;
+      color: #333;
+    }
+    header {
+      background-color: #4A90E2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.8em;
+      font-weight: 600;
+    }
+    section {
+      padding: 40px;
+      margin: 0 auto;
+      max-width: 900px;
+      background-color: white;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    h2 {
+      color: #4A90E2;
+      margin-bottom: 15px;
+    }
+    p.pie {
+      font-style: italic;
+      border-left: 4px solid #7ED321;
+      padding-left: 10px;
+      color: #555;
+    }
+    p {
+      text-align: left;
+    }
+  </style>
 </head>
-<body style="font-family: sans-serif; line-height:1.6;">
+<body style="line-height:1.6;">
 
   <header>
     <h1>Proyecto Smog: Desigualdad en el aire</h1>
@@ -67,15 +59,10 @@
   </header>
 
   <p style="text-align:left; max-width:800px;"> 
-
-Aunque la contaminación promedio bajó en varias ciudades, los datos muestran que las brechas persisten:  
-
-en la Región Metropolitana los niveles se estabilizan en torno a 25 µg/m³, mientras en La Araucanía  
-
-se registran picos críticos de más de 50 µg/m³. El hallazgo principal es que la mejora no ha sido homogénea:  
-
-la calidad del aire depende del territorio y de las políticas aplicadas. 
-</p> 
+    Aunque la contaminación promedio bajó en varias ciudades, los datos muestran que las brechas persisten:  
+    en la Región Metropolitana los niveles se estabilizan en torno a 25 µg/m³, mientras en La Araucanía se registran picos críticos de más de 50 µg/m³. 
+    El hallazgo principal es que la mejora no ha sido homogénea: la calidad del aire depende del territorio y de las políticas aplicadas. 
+  </p> 
 
   <main>
     <!-- Sección 1: Expansión RM con Flourish -->
@@ -91,7 +78,7 @@ la calidad del aire depende del territorio y de las políticas aplicadas.
               frameborder="0" scrolling="no" style="width:100%; height:600px;"></iframe>
     </section>
 
-        <!-- Sección 2: Expansión por región -->
+    <!-- Sección 2: Expansión por región -->
     <section>
       <h2>Expansión por región</h2>
       <p style="text-align:left; max-width:800px;">
@@ -100,11 +87,13 @@ la calidad del aire depende del territorio y de las políticas aplicadas.
         Este hallazgo muestra que la capacidad de medir la contaminación está concentrada en el centro del país, 
         lo que afecta la confiabilidad de las comparaciones nacionales.
       </p>
-      <div id="expansion-region"></div>
-      <script type="text/javascript" src="expansion_por_region.js"></script>
+      <div id="expansion-region-chart"></div>
+      <script>
+        vegaEmbed('#expansion-region-chart', 'visualizaciones/expansion_por_region.json');
+      </script>
     </section>
 
-    <!-- Sección 2: Comparación Sur vs Centro -->
+    <!-- Sección 3: Comparación Sur vs Centro -->
     <section>
       <h2>Sur vs Centro</h2>
       <p style="text-align:left; max-width:800px;">
@@ -113,11 +102,13 @@ la calidad del aire depende del territorio y de las políticas aplicadas.
         más limpia y la más contaminada en la región supera los 18 µg/m³, reflejando desigualdades internas 
         y la influencia del uso de leña húmeda.
       </p>
-      <div id="sur-vs-centro"></div>
-      <script type="text/javascript" src="sur_vs_centro.js"></script>
+      <div id="sur-centro-chart"></div>
+      <script>
+        vegaEmbed('#sur-centro-chart', 'visualizaciones/grafico_centrovssur.json');
+      </script>
     </section>
 
-    <!-- Sección 3: Tendencias divergentes -->
+    <!-- Sección 4: Tendencias divergentes -->
     <section>
       <h2>Tendencias divergentes</h2>
       <p style="text-align:left; max-width:800px;">
@@ -126,15 +117,17 @@ la calidad del aire depende del territorio y de las políticas aplicadas.
         valores altos sin mejoras significativas. La Araucanía presenta picos críticos y variaciones extremas. 
         Estos resultados confirman que las políticas no han tenido el mismo impacto en todo el país.
       </p>
-      <div id="tendencias-divergentes"></div>
-      <script type="text/javascript" src="tendencias_divergentes.js"></script>
+      <div id="tendencias-chart"></div>
+      <script>
+        vegaEmbed('#tendencias-chart', 'visualizaciones/grafico_tendencias_divergentes.json');
+      </script>
     </section>
   </main>
 
   <footer style="text-align:center; font-size:0.8em; color:#666; margin-top:40px; padding:10px;">
-    <p>Josefa Canepa</p>
+    <p>Josefa Cánepa</p>
     <p>Curso: Narración Gráfica de No Ficción · Pontificia Universidad Católica de Chile</p>
-    <p>Año: 2026 · Semestre II</p>
+    <p>Año: 2026 · Semestre I</p>
     <p>
       <a href="https://github.com/pepacanepa/Proyecto-Smog-3" target="_blank" 
          style="color:#666; text-decoration:none;">
@@ -145,7 +138,3 @@ la calidad del aire depende del territorio y de las políticas aplicadas.
 
 </body>
 </html>
-
-  <!-- Script que inserta el gráfico -->
-  <script src="js/application.js"></script>
-
