@@ -62,12 +62,20 @@
   <header>
     <h1>Proyecto Smog: Desigualdad en el aire</h1>
     <p style="text-align:left; max-width:800px;">
-      Aunque la contaminación promedio bajó en varias ciudades, los datos muestran que las brechas persisten: 
-      en la Región Metropolitana los niveles se estabilizan en torno a 25 µg/m³, mientras en La Araucanía 
-      se registran picos críticos de más de 50 µg/m³. El hallazgo principal es que la mejora no ha sido homogénea: 
-      la calidad del aire depende del territorio y de las políticas aplicadas.
+      El PM2.5 corresponde a partículas en suspensión con un diámetro menor a 2,5 micrómetros. Son tan pequeñas que pueden penetrar profundamente en los pulmones y llegar al sistema circulatorio. Se miden en microgramos por metro cúbico de aire (µg/m³). La Organización Mundial de la Salud recomienda no superar los 5 µg/m³ como promedio anual, mientras que en Chile los límites legales son más altos. Superar esos valores implica riesgos directos para la salud respiratoria y cardiovascular.
     </p>
   </header>
+
+  <p style="text-align:left; max-width:800px;"> 
+
+Aunque la contaminación promedio bajó en varias ciudades, los datos muestran que las brechas persisten:  
+
+en la Región Metropolitana los niveles se estabilizan en torno a 25 µg/m³, mientras en La Araucanía  
+
+se registran picos críticos de más de 50 µg/m³. El hallazgo principal es que la mejora no ha sido homogénea:  
+
+la calidad del aire depende del territorio y de las políticas aplicadas. 
+</p> 
 
   <main>
     <!-- Sección 1: Expansión RM con Flourish -->
@@ -81,6 +89,19 @@
       </p>
       <iframe src="https://public.flourish.studio/visualisation/29618658/embed" 
               frameborder="0" scrolling="no" style="width:100%; height:600px;"></iframe>
+    </section>
+
+        <!-- Sección 2: Expansión por región -->
+    <section>
+      <h2>Expansión por región</h2>
+      <p style="text-align:left; max-width:800px;">
+        La red de monitoreo se expandió de manera desigual entre regiones. Mientras la Región Metropolitana 
+        alcanzó más de 20 estaciones, otras zonas como Atacama o Aysén apenas cuentan con una o dos. 
+        Este hallazgo muestra que la capacidad de medir la contaminación está concentrada en el centro del país, 
+        lo que afecta la confiabilidad de las comparaciones nacionales.
+      </p>
+      <div id="expansion-region"></div>
+      <script type="text/javascript" src="expansion_por_region.js"></script>
     </section>
 
     <!-- Sección 2: Comparación Sur vs Centro -->
@@ -128,15 +149,3 @@
   <!-- Script que inserta el gráfico -->
   <script src="js/application.js"></script>
 
-<footer style="text-align:center; font-size:0.8em; color:#666; margin-top:40px; padding:10px;">
-  <p>Josefa Cánepa · Narración Gráfica de No Ficción</p>
-  <p>Pontificia Universidad Católica de Chile · Año 2026 · Semestre I</p>
-  <p>
-    <a href="https://github.com/pepacanepa/Proyecto-Smog-3" target="_blank" style="color:#666; text-decoration:none;">
-      Repositorio del proyecto
-    </a>
-  </p>
-</footer>
-
-</body>
-</html>
