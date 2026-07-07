@@ -95,35 +95,34 @@
 </section>
 
     <!-- Sección 3: Comparación Sur vs Centro -->
-    <section>
-      <h2>Sur vs Centro</h2>
-      <p style="text-align:left; max-width:800px;">
-        La comparación entre la Región Metropolitana y La Araucanía muestra que el sur respira peor. 
-        En 2013, Temuco alcanzó 50.8 µg/m³, el valor más alto del país. La diferencia entre la estación 
-        más limpia y la más contaminada en la región supera los 18 µg/m³, reflejando desigualdades internas 
-        y la influencia del uso de leña húmeda.
-      </p>
-      <div id="sur-centro-chart"></div>
-      <script>
-        vegaEmbed('#sur-centro-chart', 'visualizaciones/grafico_centrovssur.json');
-      </script>
-    </section>
+<section id="sur-vs-centro">
+  <h2>Sur vs Centro</h2>
+  <p style="text-align:left; max-width:800px;">
+    La comparación entre la Región Metropolitana y La Araucanía muestra que el sur respira peor. 
+    En 2013, Temuco alcanzó 50.8 µg/m³, el valor más alto del país. La diferencia entre la estación 
+    más limpia y la más contaminada en la región supera los 18 µg/m³, reflejando desigualdades internas 
+    y la influencia del uso de leña húmeda.
+  </p>
+  <div id="sur-centro-chart"></div>
+  <script>
+    vegaEmbed('#sur-centro-chart', 'visualizaciones/grafico_centrovssur.json');
+  </script>
+</section>
 
     <!-- Sección 4: Tendencias divergentes -->
-    <section>
-      <h2>Tendencias divergentes</h2>
-      <p style="text-align:left; max-width:800px;">
-        Al analizar tres regiones específicas se observa que la calidad del aire evoluciona de manera distinta. 
-        La Metropolitana muestra descensos sostenidos gracias a planes de descontaminación. Bío Bío mantiene 
-        valores altos sin mejoras significativas. La Araucanía presenta picos críticos y variaciones extremas. 
-        Estos resultados confirman que las políticas no han tenido el mismo impacto en todo el país.
-      </p>
-      <div id="tendencias-chart"></div>
-      <script>
-        vegaEmbed('#tendencias-chart', 'visualizaciones/grafico_tendencias_divergentes.json');
-      </script>
-    </section>
-  </main>
+<section id="tendencias-divergentes">
+  <h2>Tendencias divergentes</h2>
+  <p style="text-align:left; max-width:800px;">
+    Al analizar tres regiones específicas se observa que la calidad del aire evoluciona de manera distinta. 
+    La Metropolitana muestra descensos sostenidos gracias a planes de descontaminación. Bío Bío mantiene 
+    valores altos sin mejoras significativas. La Araucanía presenta picos críticos y variaciones extremas. 
+    Estos resultados confirman que las políticas no han tenido el mismo impacto en todo el país.
+  </p>
+  <div id="tendencias-chart"></div>
+  <script>
+    vegaEmbed('#tendencias-chart', 'visualizaciones/grafico_tendencias_divergentes.json');
+  </script>
+</section>
 
   <footer style="text-align:center; font-size:0.8em; color:#666; margin-top:40px; padding:10px;">
     <p>Josefa Cánepa</p>
