@@ -50,85 +50,80 @@
   }
 </style>
 
+ <!DOCTYPE html>
+<html lang="es">
+<head>
   <meta charset="UTF-8">
-  <title>Proyecto Smog - Desigualdad en el aire</title>
-  <link href="style.css" rel="stylesheet" />
-
-  <!-- Librerías necesarias para Altair/Vega -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <title>Proyecto Smog</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>Proyecto Smog — Calidad del Aire en Chile</header>
-
-<div id="intro" style="max-width:900px;margin:20px auto;text-align:center;">
-  <p style="font-size:1.2em;color:#555;">
-    La investigación presenta la evolución de la red de monitoreo de calidad del aire en Chile entre 2000 y 2026.
-  </p>
-  <p style="font-size:1.2em;color:#555;">
-    Expone diferencias regionales en los niveles de contaminación que permiten dimensionar desigualdades ambientales en el país.
-  </p>
-</div>
+<body style="font-family: sans-serif; line-height:1.6;">
 
   <header>
-    <h1>Desigualdad en el aire</h1>
+    <h1>Proyecto Smog: Desigualdad en el aire</h1>
+    <p style="text-align:left; max-width:800px;">
+      Aunque la contaminación promedio bajó en varias ciudades, los datos muestran que las brechas persisten: 
+      en la Región Metropolitana los niveles se estabilizan en torno a 25 µg/m³, mientras en La Araucanía 
+      se registran picos críticos de más de 50 µg/m³. El hallazgo principal es que la mejora no ha sido homogénea: 
+      la calidad del aire depende del territorio y de las políticas aplicadas.
+    </p>
   </header>
 
-  <!-- Bloque narrativo de la crónica -->
-  <section id="cronica">
-    <p>En Chile, la contaminación del aire comenzó a registrarse de manera sistemática con la expansión de la red de monitores. Durante los primeros años del 2000, la información disponible se concentraba en Santiago. 
-        
-<div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/29618658"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/29618658/thumbnail" width="100%" alt="bar-chart-race visualization" /></noscript></div>
+  <main>
+    <!-- Sección 1: Expansión RM con Flourish -->
+    <section>
+      <h2>Expansión de estaciones en la Región Metropolitana</h2>
+      <p style="text-align:left; max-width:800px;">
+        La Región Metropolitana fue la primera en ampliar su red de monitoreo. Este crecimiento permitió 
+        identificar diferencias internas: comunas como Las Condes redujeron sus niveles, mientras El Bosque 
+        se mantuvo con cifras altas. La expansión inicial concentrada en Santiago marcó el inicio de la 
+        política pública de calidad del aire.
+      </p>
+      <iframe src="https://public.flourish.studio/visualisation/29618658/embed" 
+              frameborder="0" scrolling="no" style="width:100%; height:600px;"></iframe>
+    </section>
 
- <p>Luego, se expandieron en las regiones de Chile.
+    <!-- Sección 2: Comparación Sur vs Centro -->
+    <section>
+      <h2>Sur vs Centro</h2>
+      <p style="text-align:left; max-width:800px;">
+        La comparación entre la Región Metropolitana y La Araucanía muestra que el sur respira peor. 
+        En 2013, Temuco alcanzó 50.8 µg/m³, el valor más alto del país. La diferencia entre la estación 
+        más limpia y la más contaminada en la región supera los 18 µg/m³, reflejando desigualdades internas 
+        y la influencia del uso de leña húmeda.
+      </p>
+      <div id="sur-vs-centro"></div>
+      <script type="text/javascript" src="sur_vs_centro.js"></script>
+    </section>
 
-<section>
-  <h2>Expansión por región de la red de monitoreo</h2>
-  <iframe src="visualizaciones/expansion_por_region.html" width="100%" height="500" style="border:none;"></iframe>
-  <p class="pie">
-    La expansión por región muestra diferencias en la instalación de estaciones de monitoreo: las zonas centrales concentraron los primeros avances, mientras el sur se incorporó más tarde, con mayores niveles de contaminación registrados.
-  </p>
-</section>
+    <!-- Sección 3: Tendencias divergentes -->
+    <section>
+      <h2>Tendencias divergentes</h2>
+      <p style="text-align:left; max-width:800px;">
+        Al analizar tres regiones específicas se observa que la calidad del aire evoluciona de manera distinta. 
+        La Metropolitana muestra descensos sostenidos gracias a planes de descontaminación. Bío Bío mantiene 
+        valores altos sin mejoras significativas. La Araucanía presenta picos críticos y variaciones extremas. 
+        Estos resultados confirman que las políticas no han tenido el mismo impacto en todo el país.
+      </p>
+      <div id="tendencias-divergentes"></div>
+      <script type="text/javascript" src="tendencias_divergentes.js"></script>
+    </section>
+  </main>
 
-        En 2009, el nivel de PM2.5 en Rancagua duplicó el límite legal con 48.7 µg/m³ y en 2013 la estación Las Encinas de Temuco alcanzó 50.8 µg/m³, el valor más alto del país en ese año. La ampliación de la red permitió observar diferencias regionales que antes no estaban documentadas.</p>
+  <footer style="text-align:center; font-size:0.8em; color:#666; margin-top:40px; padding:10px;">
+    <p>Josefa Canepa</p>
+    <p>Curso: Narración Gráfica de No Ficción · Pontificia Universidad Católica de Chile</p>
+    <p>Año: 2026 · Semestre II</p>
+    <p>
+      <a href="https://github.com/pepacanepa/Proyecto-Smog-3" target="_blank" 
+         style="color:#666; text-decoration:none;">
+        Repositorio del proyecto
+      </a>
+    </p>
+  </footer>
 
-    <h2>¿Qué significa PM2.5?</h2>
-    <p>El PM2.5 corresponde a partículas en suspensión con un diámetro menor a 2,5 micrómetros. Son tan pequeñas que pueden penetrar profundamente en los pulmones y llegar al sistema circulatorio. Se miden en microgramos por metro cúbico de aire (µg/m³). La Organización Mundial de la Salud recomienda no superar los 5 µg/m³ como promedio anual, mientras que en Chile los límites legales son más altos. Superar esos valores implica riesgos directos para la salud respiratoria y cardiovascular.</p>
-
-    <p>Los datos muestran avances en algunas comunas, como Las Condes, que redujo sus niveles de PM2.5 de manera sostenida. Otras, como El Bosque, mantienen cifras altas en comparación con sus vecinas. Puchuncaví presenta una tendencia ascendente vinculada a la actividad industrial.</p>
-
-    <p>La Región Metropolitana estabilizó sus niveles en torno a los 25 µg/m³, mientras que el sur registró valores críticos. El caso de Temuco en 2013 se explica por el uso de calefacción a leña húmeda y condiciones climáticas que dificultaron la dispersión del material particulado.</p>
-
-<section>
-  <h2>Comparación Centro vs Sur</h2>
-  <iframe src="visualizaciones/grafico_centrovssur.html"></iframe>
-  <p class="pie">Mientras la Región Metropolitana estabiliza sus niveles, Temuco muestra un pico crítico en 2012, evidenciando desigualdad ambiental.</p>
-</section>
-
-    <p>Existen limitaciones en la cobertura: estaciones cerradas como Cerrillos, Quilicura e Independencia, series cortas como la de Lautaro y registros anómalos como el salto de Valdivia 2 en dos años. Los incendios de 2023 elevaron los niveles en Maule, Ñuble y Bío Bío, mostrando que la contaminación también responde a eventos naturales.</p>
-
-    <p>Las tendencias regionales son divergentes. La Metropolitana muestra descenso y estabilización, Bío Bío mantiene valores altos y La Araucanía presenta episodios críticos. La falta de cobertura en comunas rurales impide dimensionar el problema completo. La política pública requiere cerrar estas brechas de monitoreo para enfrentar las desigualdades en la calidad del aire.</p>
-
-<section>
-  <h2>Tendencias divergentes por región</h2>
-  <iframe src="visualizaciones/grafico_tendencias_divergentes.html"></iframe>
-  <p class="pie">Las trayectorias divergentes reflejan diferencias en políticas de control y acceso desigual a un ambiente sano.</p>
-</section>
-
-<p>Las diferencias en las curvas reflejan el efecto desigual de las políticas de descontaminación aplicadas desde 2010. 
-  En la Región Metropolitana, los planes de descontaminación y las restricciones vehiculares redujeron emisiones de manera sostenida. 
-  En el sur, los programas de recambio de calefactores y subsidios para aislamiento térmico se implementaron más tarde, con menor impacto debido al uso extendido de leña. 
-  La Norma de Calidad del Aire para PM2.5 de 2011 y la expansión de la red de monitoreo permitieron identificar zonas críticas, pero la fiscalización fue más efectiva en áreas urbanas que en regiones con menor infraestructura.</p>
-
-
-<section id="cierre" style="background-color:#F5F7FA;padding:40px;margin:0 auto;max-width:900px;border-radius:8px;">
-
-  <p style="font-size:1.1em;color:#444;line-height:1.6;border-left:4px solid #7ED321;padding-left:12px;">
-    La calidad del aire en Chile ha mejorado en términos generales, pero con diferencias significativas entre regiones y comunas. 
-    La evidencia subraya que las políticas de control ambiental han tenido efectos desiguales y que la cobertura de monitoreo sigue siendo clave para evaluar riesgos y orientar decisiones públicas.
-  </p>
-</section>
+</body>
+</html>
 
   <!-- Script que inserta el gráfico -->
   <script src="js/application.js"></script>
