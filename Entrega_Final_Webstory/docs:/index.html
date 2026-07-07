@@ -1,68 +1,54 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Smog en Santiago: desigualdad en la calidad del aire</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Smog en Santiago</h1>
-        <h2>Desigualdad en la calidad del aire</h2>
-    </header>
+<section id="cronica">
+  <h3>Crónica Final — Desigualdad en el aire</h3>
 
-    <section id="introduccion">
-        <h3>Introducción</h3>
-        <p>
-            La contaminación atmosférica en Santiago no afecta a todos por igual. 
-            Mientras algunas comunas han mostrado mejoras en la reducción de material particulado fino (PM2,5), 
-            otras siguen enfrentando niveles críticos que impactan directamente en la salud de sus habitantes. 
-            Esta webstory busca narrar, a través de datos y visualizaciones, cómo la desigualdad ambiental se convierte 
-            en un reflejo de las brechas urbanas y sociales de la ciudad.
-        </p>
-    </section>
+  <p>
+    En Chile, la contaminación del aire comenzó a registrarse de manera sistemática con la expansión de la red de monitores. 
+    Durante los primeros años del 2000, la información disponible se concentraba en Santiago. 
+    En 2009, Rancagua duplicó el límite legal con 48.7 µg/m³ y en 2013 la estación Las Encinas de Temuco alcanzó 50.8 µg/m³, 
+    el valor más alto del país en ese año. La ampliación de la red permitió observar diferencias regionales que antes no estaban documentadas.
+  </p>
 
-    <section id="cronica">
-        <h3>Crónica</h3>
-        <p>
-            El análisis de las últimas mediciones revela que comunas como <strong>Las Condes</strong> y <strong>Quilicura</strong> 
-            han logrado avances en la disminución de la contaminación. Sin embargo, sectores como <strong>Independencia</strong> 
-            y <strong>Cerro Navia</strong> mantienen cifras preocupantes. La pendiente de la evolución de los datos muestra que 
-            las mejoras no son homogéneas: algunas curvas descienden, otras se estancan. Este contraste evidencia que el aire limpio 
-            sigue siendo un privilegio desigual en Santiago.
-        </p>
-    </section>
+  <div class="pm25-info">
+    <h4>¿Qué significa PM2.5?</h4>
+    <p>
+      El PM2.5 corresponde a partículas en suspensión con un diámetro menor a 2,5 micrómetros. 
+      Son tan pequeñas que pueden penetrar profundamente en los pulmones y llegar al sistema circulatorio. 
+      Se miden en microgramos por metro cúbico de aire (µg/m³). 
+      La Organización Mundial de la Salud recomienda no superar los 5 µg/m³ como promedio anual, 
+      mientras que en Chile los límites legales son más altos. 
+      Superar esos valores implica riesgos directos para la salud respiratoria y cardiovascular.
+    </p>
+  </div>
 
-    <section id="visualizacion-altair">
-        <h3>Visualización Altair</h3>
-        <p>
-            El siguiente gráfico interactivo muestra la evolución de la pendiente de contaminación por comuna. 
-            Se exportó en formato HTML para permitir la exploración directa de los datos.
-        </p>
-        <iframe src="grafico_altair.html" width="100%" height="500"></iframe>
-    </section>
+  <p>
+    Los datos muestran avances en algunas comunas, como Las Condes, que redujo sus niveles de PM2.5 de manera sostenida. 
+    Otras, como El Bosque, mantienen cifras altas en comparación con sus vecinas. 
+    Puchuncaví presenta una tendencia ascendente vinculada a la actividad industrial.
+  </p>
 
-    <section id="visualizacion-flourish">
-        <h3>Visualización Flourish</h3>
-        <p>
-            Para complementar la narrativa, se incluye un gráfico desarrollado en Flourish que permite comparar 
-            de manera visual las diferencias entre comunas. Esta herramienta facilita la comprensión rápida de 
-            las desigualdades ambientales.
-        </p>
-        <!-- Pega aquí el código de embed de Flourish -->
-    </section>
+  <p>
+    La Región Metropolitana estabilizó sus niveles en torno a los 25 µg/m³, mientras que el sur registró valores críticos. 
+    El caso de Temuco en 2013 se explica por el uso de calefacción a leña húmeda y condiciones climáticas que dificultaron la dispersión del material particulado.
+  </p>
 
-    <section id="recursos">
-        <h3>Recursos de apoyo</h3>
-        <ul>
-            <li><a href="https://www.mma.gob.cl" target="_blank">Ministerio del Medio Ambiente</a></li>
-            <li><a href="https://www.google.cl/search?q=PM2.5+Santiago" target="_blank">Búsqueda sobre PM2,5 en Santiago</a></li>
-        </ul>
-    </section>
+  <p>
+    Existen limitaciones en la cobertura: estaciones cerradas como Cerrillos, Quilicura e Independencia, 
+    series cortas como la de Lautaro y registros anómalos como el salto de Valdivia 2 en dos años. 
+    Los incendios de 2023 elevaron los niveles en Maule, Ñuble y Bío Bío, mostrando que la contaminación también responde a eventos naturales.
+  </p>
 
-    <footer>
-        <p>Autoría: Josefa Canepa · COM-208 · 2026 · 
-        <a href="https://github.com/pepacanepa/Proyecto-Smog-3">Repositorio del proyecto</a></p>
-    </footer>
-</body>
-</html>
+  <p>
+    Las tendencias regionales son divergentes. La Metropolitana muestra descenso y estabilización, 
+    Bío Bío mantiene valores altos y La Araucanía presenta episodios críticos. 
+    La falta de cobertura en comunas rurales impide dimensionar el problema completo. 
+    La política pública requiere cerrar estas brechas de monitoreo para enfrentar las desigualdades en la calidad del aire.
+  </p>
+
+  <p>
+    La historia del aire en Chile es la de una mejora desigual. 
+    Los datos revelan avances, pero también silencios. 
+    Lo que los monitores registran es tan importante como lo que no alcanzan a medir. 
+    En esa brecha, entre lo observado y lo invisible, se define la posibilidad de respirar un futuro más justo.
+  </p>
+</section>
+<iframe src="visualizaciones/expansion_nacional.html" width="100%" height="500"></iframe>
