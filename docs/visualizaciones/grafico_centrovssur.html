@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-4b3c0a02a6157a96bca5e45e39d3902d"}, "mark": {"type": "line", "point": true}, "encoding": {"color": {"field": "Regi\u00f3n", "scale": {"domain": ["Metropolitana", "Temuco"], "range": ["#F5A623", "#4A90E2"]}, "title": "Regi\u00f3n", "type": "nominal"}, "tooltip": [{"field": "A\u00f1o", "type": "quantitative"}, {"field": "Regi\u00f3n", "type": "nominal"}, {"field": "PM25_promedio_anual", "type": "quantitative"}], "x": {"field": "A\u00f1o", "title": "A\u00f1o", "type": "ordinal"}, "y": {"field": "PM25_promedio_anual", "title": "PM2.5 promedio anual (\u00b5g/m\u00b3)", "type": "quantitative"}}, "height": 400, "title": "Comparaci\u00f3n Sur vs Centro (2000\u20132026)", "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-4b3c0a02a6157a96bca5e45e39d3902d": [{"A\u00f1o": 2000, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 28.0}, {"A\u00f1o": 2001, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 27.0}, {"A\u00f1o": 2002, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 26.0}, {"A\u00f1o": 2003, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 25.0}, {"A\u00f1o": 2004, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 24.0}, {"A\u00f1o": 2005, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 26.0}, {"A\u00f1o": 2006, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 27.0}, {"A\u00f1o": 2007, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 28.0}, {"A\u00f1o": 2008, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 25.0}, {"A\u00f1o": 2009, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 24.0}, {"A\u00f1o": 2010, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 23.0}, {"A\u00f1o": 2011, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 22.0}, {"A\u00f1o": 2012, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 25.0}, {"A\u00f1o": 2013, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 24.0}, {"A\u00f1o": 2014, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 23.0}, {"A\u00f1o": 2015, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 22.0}, {"A\u00f1o": 2016, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 25.0}, {"A\u00f1o": 2017, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 26.0}, {"A\u00f1o": 2018, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 24.0}, {"A\u00f1o": 2019, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 23.0}, {"A\u00f1o": 2020, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 25.0}, {"A\u00f1o": 2021, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 24.0}, {"A\u00f1o": 2022, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 23.0}, {"A\u00f1o": 2023, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 22.0}, {"A\u00f1o": 2024, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 21.0}, {"A\u00f1o": 2025, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 22.0}, {"A\u00f1o": 2026, "Regi\u00f3n": "Metropolitana", "PM25_promedio_anual": 23.0}, {"A\u00f1o": 2000, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 30.0}, {"A\u00f1o": 2001, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 32.0}, {"A\u00f1o": 2002, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 31.0}, {"A\u00f1o": 2003, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 33.0}, {"A\u00f1o": 2004, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 34.0}, {"A\u00f1o": 2005, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 35.0}, {"A\u00f1o": 2006, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 36.0}, {"A\u00f1o": 2007, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 37.0}, {"A\u00f1o": 2008, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 38.0}, {"A\u00f1o": 2009, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 36.0}, {"A\u00f1o": 2010, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 33.0}, {"A\u00f1o": 2011, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 34.0}, {"A\u00f1o": 2012, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 50.8}, {"A\u00f1o": 2013, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 33.0}, {"A\u00f1o": 2014, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 32.0}, {"A\u00f1o": 2015, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 31.0}, {"A\u00f1o": 2016, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 30.0}, {"A\u00f1o": 2017, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 29.0}, {"A\u00f1o": 2018, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 28.0}, {"A\u00f1o": 2019, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 27.0}, {"A\u00f1o": 2020, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 26.0}, {"A\u00f1o": 2021, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 25.0}, {"A\u00f1o": 2022, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 24.0}, {"A\u00f1o": 2023, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 23.0}, {"A\u00f1o": 2024, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 22.0}, {"A\u00f1o": 2025, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 23.0}, {"A\u00f1o": 2026, "Regi\u00f3n": "Temuco", "PM25_promedio_anual": 24.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
