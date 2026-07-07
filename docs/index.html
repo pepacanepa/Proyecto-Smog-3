@@ -1,6 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    background-color: #F5F7FA;
+    color: #333;
+  }
+  header {
+    background-color: #4A90E2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 600;
+  }
+  section {
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 900px;
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  h2 {
+    color: #4A90E2;
+    margin-bottom: 15px;
+  }
+  p.pie {
+    font-style: italic;
+    border-left: 4px solid #7ED321;
+    padding-left: 10px;
+    color: #555;
+  }
+  iframe {
+    border: none;
+    width: 100%;
+    height: 500px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+</style>
+
   <meta charset="UTF-8">
   <title>Proyecto Smog - Desigualdad en el aire</title>
   <link href="style.css" rel="stylesheet" />
@@ -11,6 +54,26 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 <body>
+    <header>Proyecto Smog — Calidad del Aire en Chile</header>
+
+<section>
+  <h2>Expansión nacional de la red de monitoreo</h2>
+  <iframe src="visualizaciones/expansion_nacional.html"></iframe>
+  <p class="pie">La red de monitoreo creció de 4 estaciones en 2000 a más de 90 en 2026, reflejando avances en cobertura pero también desigualdades territoriales.</p>
+</section>
+
+<section>
+  <h2>Comparación Centro vs Sur</h2>
+  <iframe src="visualizaciones/grafico_centrovssur.html"></iframe>
+  <p class="pie">Mientras la Región Metropolitana estabiliza sus niveles, Temuco muestra un pico crítico en 2012, evidenciando desigualdad ambiental.</p>
+</section>
+
+<section>
+  <h2>Tendencias divergentes por región</h2>
+  <iframe src="visualizaciones/grafico_tendencias_divergentes.html"></iframe>
+  <p class="pie">Las trayectorias divergentes reflejan diferencias en políticas de control y acceso desigual a un ambiente sano.</p>
+</section>
+
   <header>
     <h1>Desigualdad en el aire</h1>
   </header>
