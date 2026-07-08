@@ -6,145 +6,160 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
- <!-- Librerías Vega en el <head> -->
-<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <!-- Librerías Vega -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-<style>
-  body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    background-color: #F5F7FA;
-    color: #333;
-    line-height: 1.6;
-  }
-  header {
-    background: linear-gradient(90deg, #4A90E2, #7ED321);
-    color: white;
-    padding: 30px;
-    text-align: center;
-    font-size: 2em;
-    font-weight: 600;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  }
-  section {
-    padding: 40px;
-    margin: 20px auto;
-    max-width: 900px;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-  h2 {
-    color: #4A90E2;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #7ED321;
-    padding-bottom: 5px;
-  }
-  p {
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto 20px auto;
-  }
-  footer {
-    text-align: center;
-    font-size: 0.9em;
-    color: #666;
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #EAF6F9;
-    border-top: 2px solid #4A90E2;
-  }
-  footer a {
-    color: #4A90E2;
-    text-decoration: none;
-    font-weight: 600;
-  }
-</style>
-
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      background-color: #F5F7FA;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #4A90E2, #7ED321);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      font-size: 2.2em;
+      font-weight: 600;
+    }
+    header p {
+      max-width: 900px;
+      margin: 20px auto 0 auto;
+      font-size: 1em;
+      line-height: 1.6;
+    }
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    section {
+      margin-bottom: 60px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      padding: 40px;
+    }
+    h2 {
+      color: #4A90E2;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #7ED321;
+      padding-bottom: 5px;
+      font-size: 1.6em;
+    }
+    p {
+      text-align: left;
+      max-width: 850px;
+      margin: 0 auto 20px auto;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 600px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 60px;
+      padding: 30px;
+      background-color: #EAF6F9;
+      border-top: 2px solid #4A90E2;
+    }
+    footer a {
+      color: #4A90E2;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
 
   <header>
     <h1>Proyecto Smog: Desigualdad en el aire</h1>
-    <p style="text-align:left; max-width:800px;">
+    <p>
       El PM2.5 corresponde a partículas en suspensión con un diámetro menor a 2,5 micrómetros. Son tan pequeñas que pueden penetrar profundamente en los pulmones y llegar al sistema circulatorio. Se miden en microgramos por metro cúbico de aire (µg/m³). La Organización Mundial de la Salud recomienda no superar los 5 µg/m³ como promedio anual, mientras que en Chile los límites legales son más altos. Superar esos valores implica riesgos directos para la salud respiratoria y cardiovascular.
     </p>
+    <p>
+      Aunque la contaminación promedio bajó en varias ciudades, los datos muestran que las brechas persisten:  
+      en la Región Metropolitana los niveles se estabilizan en torno a 25 µg/m³, mientras en La Araucanía se registran picos críticos de más de 50 µg/m³. 
+      El hallazgo principal es que la mejora no ha sido homogénea: la calidad del aire depende del territorio y de las políticas aplicadas. 
+    </p>
   </header>
-
-  <p style="text-align:left; max-width:800px;"> 
-    Aunque la contaminación promedio bajó en varias ciudades, los datos muestran que las brechas persisten:  
-    en la Región Metropolitana los niveles se estabilizan en torno a 25 µg/m³, mientras en La Araucanía se registran picos críticos de más de 50 µg/m³. 
-    El hallazgo principal es que la mejora no ha sido homogénea: la calidad del aire depende del territorio y de las políticas aplicadas. 
-  </p> 
 
   <main>
     <!-- Sección 1: Expansión RM con Flourish -->
     <section>
       <h2>Expansión de estaciones en la Región Metropolitana</h2>
-      <p style="text-align:left; max-width:800px;">
+      <p>
         La Región Metropolitana fue la primera en ampliar su red de monitoreo. Este crecimiento permitió 
         identificar diferencias internas: comunas como Las Condes redujeron sus niveles, mientras El Bosque 
         se mantuvo con cifras altas. La expansión inicial concentrada en Santiago marcó el inicio de la 
         política pública de calidad del aire.
       </p>
       <iframe src="https://public.flourish.studio/visualisation/29618658/embed" 
-              frameborder="0" scrolling="no" style="width:100%; height:600px;"></iframe>
+              frameborder="0" scrolling="no"></iframe>
     </section>
 
     <!-- Sección 2: Expansión por región -->
- <!-- Dentro del <main> -->
-<section id="expansion-region">
-  <h2>Expansión por región</h2>
-  <p style="text-align:left; max-width:800px;">
-    La red de monitoreo se expandió de manera desigual entre regiones. Mientras la Región Metropolitana 
-    alcanzó más de 20 estaciones, otras zonas como Atacama o Aysén apenas cuentan con una o dos. 
-    Este hallazgo muestra que la capacidad de medir la contaminación está concentrada en el centro del país, 
-    lo que afecta la confiabilidad de las comparaciones nacionales.
-  </p>
-  <div id="expansion-region-chart"></div>
-  <script>
-    vegaEmbed('#expansion-region-chart', 'visualizaciones/expansion_por_region.json');
-  </script>
-</section>
+    <section id="expansion-region">
+      <h2>Expansión por región</h2>
+      <p>
+        La red de monitoreo se expandió de manera desigual entre regiones. Mientras la Región Metropolitana 
+        alcanzó más de 20 estaciones, otras zonas como Atacama o Aysén apenas cuentan con una o dos. 
+        Este hallazgo muestra que la capacidad de medir la contaminación está concentrada en el centro del país, 
+        lo que afecta la confiabilidad de las comparaciones nacionales.
+      </p>
+      <div id="expansion-region-chart"></div>
+      <script>
+        vegaEmbed('#expansion-region-chart', 'visualizaciones/expansion_por_region.json');
+      </script>
+    </section>
 
     <!-- Sección 3: Comparación Sur vs Centro -->
-<section id="sur-vs-centro">
-  <h2>Sur vs Centro</h2>
-  <p style="text-align:left; max-width:800px;">
-    La comparación entre la Región Metropolitana y La Araucanía muestra que el sur respira peor. 
-    En 2013, Temuco alcanzó 50.8 µg/m³, el valor más alto del país. La diferencia entre la estación 
-    más limpia y la más contaminada en la región supera los 18 µg/m³, reflejando desigualdades internas 
-    y la influencia del uso de leña húmeda.
-  </p>
-  <div id="sur-centro-chart"></div>
-  <script>
-    vegaEmbed('#sur-centro-chart', 'visualizaciones/grafico_centrovssur.json');
-  </script>
-</section>
+    <section id="sur-vs-centro">
+      <h2>Sur vs Centro</h2>
+      <p>
+        La comparación entre la Región Metropolitana y La Araucanía muestra que el sur respira peor. 
+        En 2013, Temuco alcanzó 50.8 µg/m³, el valor más alto del país. La diferencia entre la estación 
+        más limpia y la más contaminada en la región supera los 18 µg/m³, reflejando desigualdades internas 
+        y la influencia del uso de leña húmeda.
+      </p>
+      <div id="sur-centro-chart"></div>
+      <script>
+        vegaEmbed('#sur-centro-chart', 'visualizaciones/grafico_centrovssur.json');
+      </script>
+    </section>
 
     <!-- Sección 4: Tendencias divergentes -->
-<section id="tendencias-divergentes">
-  <h2>Tendencias divergentes</h2>
-  <p style="text-align:left; max-width:800px;">
-    Al analizar tres regiones específicas se observa que la calidad del aire evoluciona de manera distinta. 
-    La Metropolitana muestra descensos sostenidos gracias a planes de descontaminación. Bío Bío mantiene 
-    valores altos sin mejoras significativas. La Araucanía presenta picos críticos y variaciones extremas. 
-    Estos resultados confirman que las políticas no han tenido el mismo impacto en todo el país.
-  </p>
-  <div id="tendencias-chart"></div>
-  <script>
-    vegaEmbed('#tendencias-chart', 'visualizaciones/grafico_tendencias_divergentes.json');
-  </script>
-</section>
+    <section id="tendencias-divergentes">
+      <h2>Tendencias divergentes</h2>
+      <p>
+        Al analizar tres regiones específicas se observa que la calidad del aire evoluciona de manera distinta. 
+        La Metropolitana muestra descensos sostenidos gracias a planes de descontaminación. Bío Bío mantiene 
+        valores altos sin mejoras significativas. La Araucanía presenta picos críticos y variaciones extremas. 
+        Estos resultados confirman que las políticas no han tenido el mismo impacto en todo el país.
+      </p>
+      <div id="tendencias-chart"></div>
+      <script>
+        vegaEmbed('#tendencias-chart', 'visualizaciones/grafico_tendencias_divergentes.json');
+      </script>
+    </section>
+  </main>
 
-  <footer style="text-align:center; font-size:0.8em; color:#666; margin-top:40px; padding:10px;">
+  <footer>
     <p>Josefa Cánepa</p>
     <p>Curso: Narración Gráfica de No Ficción · Pontificia Universidad Católica de Chile</p>
     <p>Año: 2026 · Semestre I</p>
     <p>
-      <a href="https://github.com/pepacanepa/Proyecto-Smog-3" target="_blank" 
-         style="color:#666; text-decoration:none;">
+      <a href="https://github.com/pepacanepa/Proyecto-Smog-3" target="_blank">
         Repositorio del proyecto
       </a>
     </p>
