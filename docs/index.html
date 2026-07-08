@@ -78,21 +78,71 @@
       text-decoration: none;
       font-weight: 600;
     }
+    .hero {
+  background: linear-gradient(90deg, #4A90E2, #7ED321);
+  color: white;
+  padding: 80px 20px 60px 20px;
+  text-align: center;
+  border-bottom: 4px solid #4A90E2;
+}
+.hero h1 {
+  font-size: 3em;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.hero h2 {
+  font-size: 1.6em;
+  font-weight: 400;
+  margin-top: 10px;
+  color: #EAF6F9;
+}
+.intro {
+  background-color: #F5F7FA;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.bajada {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #4A90E2;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.primer-parrafo {
+  font-size: 1em;
+  color: #333;
+  text-align: left;
+  line-height: 1.7;
+}
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Proyecto Smog: Desigualdad en el aire</h1>
-    <p>
-      El PM2.5 corresponde a partículas en suspensión con un diámetro menor a 2,5 micrómetros. Son tan pequeñas que pueden penetrar profundamente en los pulmones y llegar al sistema circulatorio. Se miden en microgramos por metro cúbico de aire (µg/m³). La Organización Mundial de la Salud recomienda no superar los 5 µg/m³ como promedio anual, mientras que en Chile los límites legales son más altos. Superar esos valores implica riesgos directos para la salud respiratoria y cardiovascular.
+<header>
+  <div class="hero">
+    <h1>Proyecto Smog</h1>
+    <h2>Desigualdad en el aire</h2>
+  </div>
+
+  <div class="intro">
+    <p class="bajada">
+      La contaminación atmosférica en Chile revela una desigualdad ambiental persistente. 
+      Las diferencias territoriales en la calidad del aire muestran cómo las políticas públicas 
+      y la infraestructura de monitoreo determinan quién respira mejor y quién no.
     </p>
-    <p>
-      Aunque la contaminación promedio bajó en varias ciudades, los datos muestran que las brechas persisten:  
-      en la Región Metropolitana los niveles se estabilizan en torno a 25 µg/m³, mientras en La Araucanía se registran picos críticos de más de 50 µg/m³. 
-      El hallazgo principal es que la mejora no ha sido homogénea: la calidad del aire depende del territorio y de las políticas aplicadas. 
+
+    <p class="primer-parrafo">
+      El PM2.5 corresponde a partículas en suspensión con un diámetro menor a 2,5 micrómetros. 
+      Son tan pequeñas que pueden penetrar profundamente en los pulmones y llegar al sistema circulatorio. 
+      Se miden en microgramos por metro cúbico de aire (µg/m³). La Organización Mundial de la Salud recomienda 
+      no superar los 5 µg/m³ como promedio anual, mientras que en Chile los límites legales son más altos. 
+      Superar esos valores implica riesgos directos para la salud respiratoria y cardiovascular.
     </p>
-  </header>
+  </div>
+</header>
+
 
   <main>
     <!-- Sección 1: Expansión RM con Flourish -->
